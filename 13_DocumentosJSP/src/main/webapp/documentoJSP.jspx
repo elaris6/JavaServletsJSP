@@ -1,0 +1,42 @@
+
+<!-- Esto es un documento de tipo JSPx, que tiene una estructura de XML.
+No es común encontrar este tipo de documentos, pero se puede realizar la misma
+funcionalidad que con los JSP ordinarios, aunque la sintaxis es diferente,
+adecuada a XML.
+-->
+
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+    <!-- Uso de declaraciones en JSPx -->
+    <jsp:declaration>
+        private int contadorVisitas = 1;
+    </jsp:declaration>
+
+    <!-- Inclusión de código HTML -->
+    <html>
+        <body>
+            <h1>Ejemplo de documento JSPx</h1>
+            <!-- Uso de salida de texto -->
+            <jsp:text>Saludos desde documento JSPx</jsp:text>
+                <br/>
+                <!-- Uso de expresiones en JSPx -->
+            <jsp:expression>2 * 3</jsp:expression>
+                <br/>
+                <!-- Uso de scriptlets en JSPx -->
+            <jsp:scriptlet>
+                String nombreAplicacion = request.getContextPath();
+            </jsp:scriptlet>
+            Nombre de la aplicación: <jsp:expression>nombreAplicacion</jsp:expression>
+                <br/>
+                Contador de visitas: <jsp:expression>this.contadorVisitas++</jsp:expression>
+                <br/>
+                <a href="index.html">Volver a inicio</a>
+
+            </body>
+
+        </html>
+
+
+</jsp:root>
