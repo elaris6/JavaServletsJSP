@@ -27,6 +27,6 @@
         Valor área: <jsp:getProperty name="rectangulo" property="area"/>
         <br/>
         <br/>
-        <a><a href="index.jsp">Volver al inicio</a>
+        <a href="index.jsp">Volver al inicio</a>
     </body>
 </html>
